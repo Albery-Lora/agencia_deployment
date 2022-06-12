@@ -1,0 +1,2 @@
+Controller es la C de MVC y este se encarga de que informacion se va a 
+cargar y que vista se va a mostrar

@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{nombreSitio} | #{pagina}
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/style.css")
+        link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Staatliches&display=swap' rel='stylesheet')
+        
+
+    body(class= clase) 
+<!--Todo lo que ponga debajo aparecera en todos los views/paginas pugs-->
+
+
+<!--"include sirve para agregar aqui codigo de otro documento. En este caso lo usare para agergar el view/pug "header"-->
+        include header
+
+<!--con "block" puedo poner contenido especifico en un view pug/pagina-->
+        block slider
+        block contenido
+
+
+        include footer 

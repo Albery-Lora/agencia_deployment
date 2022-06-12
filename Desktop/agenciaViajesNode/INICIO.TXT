@@ -1,0 +1,76 @@
+Your environment has been set up for using Node.js 16.13.0 (x64) and npm.
+
+C:\Users\Work>cd desktop
+
+C:\Users\Work\Desktop>cd agenciaViajesNode
+The system cannot find the path specified.
+
+C:\Users\Work\Desktop>mkdir agenciaViajesNode
+
+C:\Users\Work\Desktop>cd agenciaViajesNode
+
+C:\Users\Work\Desktop\agenciaViajesNode>npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (agenciaviajesnode)
+version: (1.0.0)
+description: Primer Proyecto con Node.js
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author: Albery
+license: (ISC)
+About to write to C:\Users\Work\Desktop\agenciaViajesNode\package.json:
+
+{
+  "name": "agenciaviajesnode",
+  "version": "1.0.0",
+  "description": "Primer Proyecto con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Albery",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) y
+
+C:\Users\Work\Desktop\agenciaViajesNode>npm install express
+
+added 57 packages, and audited 58 packages in 3s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Work\Desktop\agenciaViajesNode>npm install --save-dev nodemon
+
+added 116 packages, and audited 174 packages in 6s
+
+23 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+C:\Users\Work\Desktop\agenciaViajesNode>
+
+
+
+
+//PARA HACER DEPLOYMENT USAMOS
+
+npm install --save-dev dotenv
+
+dependencia genera variables de entorno. Variables locales y variables entorno Heroku. Las variables locales tienen un valor y las que estan en el servidor tienen otro. entorno local vs entorno de produccion
