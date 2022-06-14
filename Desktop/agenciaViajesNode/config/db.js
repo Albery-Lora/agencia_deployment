@@ -37,6 +37,8 @@ import Sequelize from 'sequelize';
 import dotenv from 'dotenv';
 dotenv.config({path:"variables.env"});
 
+console.log(process.env.BD_HOST)
+
 // console.log(process.env.BD_PORT) ; PARA COMPROBAR QUE NUESTRA CONEXION FUNCIONA CORRECTAMENTE
 
 //parametros: 1-nombre de la BD, 2-usuario,3-contraseña(si tiene),4-configuracion

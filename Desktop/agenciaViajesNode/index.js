@@ -12,9 +12,9 @@ import router from "./routes/index.js";
 //importar la base de datos
 import db from "./config/db.js";
 
+//importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
 import dotenv from 'dotenv';
 dotenv.config({path:"variables.env"});
-
 
 //conectar con la base de datos
 db.authenticate()
