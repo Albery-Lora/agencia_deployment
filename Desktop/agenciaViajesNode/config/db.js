@@ -33,8 +33,8 @@ mysql, sqlite, postgres, mssql.
 */
 
 
-import dotenv from 'dotenv/config';
-
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 
@@ -42,6 +42,7 @@ console.log(process.env.BD_NOMBRE);
 console.log(process.env.BD_USER);
 console.log(process.env.BD_PASS);
 console.log(process.env.BD_HOST);
+console.log(process.env.BD_PORT);
 
 import Sequelize from 'sequelize';
 
@@ -51,7 +52,7 @@ import Sequelize from 'sequelize';
 //parametros: 1-nombre de la BD, 2-usuario,3-contraseña(si tiene),4-configuracion
 const BD = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER,process.env.BD_PASS, {
     host: process.env.BD_HOST,
-    port: 3306,
+    port: process.env.BD_PORT,
     dialect: 'mysql',
     define: {
         timestamps: false //para que no almacene cuando fue creado o borrado un registro
