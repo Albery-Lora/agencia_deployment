@@ -58,7 +58,7 @@ app.use('/', router);
 const host = process.env.BD_HOST || '127.0.0.1';
 
 //Definir puerto
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 //arranca el servidor. Si sale bien ejecuta callback que nos dice el puerto en el que corre el servidor
 app.listen( port, host, () =>{
