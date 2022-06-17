@@ -2,8 +2,7 @@
 import BD from "./config/db.js";
 
 //importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
-// import dotenv from 'dotenv';
-// dotenv.config();
+import dotenv from 'dotenv/config';
 
 //importar express y asignarlo a una variable. VERSION COMMONJS(FORMA ANTIGUA)
 // const express = require('express');
@@ -56,10 +55,10 @@ app.use('/', router);
 
 
 //definir el host para la app
-const host = '127.0.0.1';
+const host = process.env.BD_HOST || '127.0.0.1';
 
 //Definir puerto
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //arranca el servidor. Si sale bien ejecuta callback que nos dice el puerto en el que corre el servidor
 app.listen( port, host, () =>{
