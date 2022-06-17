@@ -8,6 +8,7 @@
     "start": "node index.js"
   },
   "type": "module",
+  "dotenv": "^16.0.1",
   "author": "Albery",
   "license": "ISC",
   "dependencies": {
