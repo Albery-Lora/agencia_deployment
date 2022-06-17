@@ -1,3 +1,9 @@
+//importar la base de datos
+import BD from "./config/db.js";
+
+//importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
+import dotenv from 'dotenv';
+dotenv.config();
 
 //importar express y asignarlo a una variable. VERSION COMMONJS(FORMA ANTIGUA)
 // const express = require('express');
@@ -9,15 +15,11 @@ import express from "express";
 import router from "./routes/index.js";
 
 
-//importar la base de datos
-import db from "./config/db.js";
 
-//importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
-import dotenv from 'dotenv';
-dotenv.config({path:"variables.env"});
+
 
 //conectar con la base de datos
-db.authenticate()
+BD.authenticate()
     .then(()=>console.log('Base de datos conectada'))
     .catch(error => console.log(error));
 
@@ -54,7 +56,7 @@ app.use('/', router);
 
 
 //definir el host para la app
-const host = process.env.HOST || '0.0.0.0';
+const host = process.env.BD_HOST || '0.0.0.0';
 
 //Definir puerto
 const port = process.env.PORT || 3000;

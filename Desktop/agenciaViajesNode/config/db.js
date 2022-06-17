@@ -33,16 +33,24 @@ mysql, sqlite, postgres, mssql.
 */
 
 
-import Sequelize from 'sequelize';
 import dotenv from 'dotenv';
-dotenv.config({path:"variables.env"});
+dotenv.config();
 
-console.log(process.env.BD_HOST)
+
+
+console.log(process.env.BD_NOMBRE);
+console.log(process.env.BD_USER);
+console.log(process.env.BD_PASS);
+console.log(process.env.BD_HOST);
+console.log(process.env.BD_PORT);
+
+import Sequelize from 'sequelize';
+
 
 // console.log(process.env.BD_PORT) ; PARA COMPROBAR QUE NUESTRA CONEXION FUNCIONA CORRECTAMENTE
 
 //parametros: 1-nombre de la BD, 2-usuario,3-contraseña(si tiene),4-configuracion
-const BD = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASS, {
+const BD = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER,process.env.BD_PASS, {
     host: process.env.BD_HOST,
     port: process.env.BD_PORT,
     dialect: 'mysql',
@@ -53,7 +61,7 @@ const BD = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env
         max: 5,
         min: 0,
         acquire: 30000,
-        idle: 1000
+        idle: 10000
     },
     operatorAliases: false
 });
