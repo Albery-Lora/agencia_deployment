@@ -56,7 +56,7 @@ app.use('/', router);
 
 
 //definir el host para la app
-const host = process.env.BD_HOST || '127.0.0.1';
+const host = process.env.BD_HOST || '0.0.0.0';
 
 //Definir puerto
 const port = 3000;
