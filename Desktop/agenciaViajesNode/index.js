@@ -1,8 +1,9 @@
+//importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
+import dotenv from 'dotenv/config';
+
 //importar la base de datos
 import BD from "./config/db.js";
 
-//importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
-import dotenv from 'dotenv/config';
 
 //importar express y asignarlo a una variable. VERSION COMMONJS(FORMA ANTIGUA)
 // const express = require('express');
