@@ -1,5 +1,7 @@
 //importar variables de entorno. Estas son variables cuyos valores son diferentes en el entorno de Desarrollo y el entorno de Produccion
-import dotenv from 'dotenv/config';
+import dotenv from 'dotenv';
+require('dotenv').config();
+
 
 //importar la base de datos
 import BD from "./config/db.js";

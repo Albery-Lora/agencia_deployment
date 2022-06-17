@@ -33,7 +33,9 @@ mysql, sqlite, postgres, mssql.
 */
 
 
-import dotenv from 'dotenv/config';
+import dotenv from 'dotenv';
+require('dotenv').config()
+
 
 
 
