@@ -1,0 +1,2 @@
+En Models es la M de MVC y aqui se pone la estructura de nuestra Base de 
+Datos
